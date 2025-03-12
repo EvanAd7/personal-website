@@ -1,0 +1,3 @@
+export const description = `I’m a software engineer and entrepreneur with a passion for building products that are innovative, impactful, and user-friendly. I’m currently studying at the University of Southern California, pursuing a Bachelor of Science in Computer Science.
+
+I’m also a researcher with deep interests in the field of neuroscience, artificial intelligence, machine learning, and epigenetics. In high school, I conducted research at UC San Diego and published an independent research paper. As a San Diegan myself, I enjoy surfing, hiking, and playing music in my free time.`;
