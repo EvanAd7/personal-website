@@ -3,5 +3,6 @@ export const education = {
     major: "Computer Science",
     extra: "Presidential Scholar",
     gradYear: "Expected May 2028",
-    logo: "/images/USC.png"
+    logo: "/images/USC.png",
+    link: "https://www.usc.edu/"
 }

@@ -1,56 +1,61 @@
 'use client'
 
-import Title from "@/app/homepage/components/Title";
-import Headline from "@/app/homepage/components/Headline";
-import SocialLinks from "@/app/homepage/components/SocialLinks";
-import AboutSection from "@/app/homepage/components/AboutSection";
-import ProjectContainer from "@/app/homepage/components/ProjectContainer";
-import ExperienceContainer from "@/app/homepage/components/ExperienceContainer";
-import EducationContainer from "@/app/homepage/components/EducationContainer";
-import SkillsSection from "@/app/homepage/components/SkillsSection";
+import Title from "./homepage/components/Title";
+import Headline from "./homepage/components/Headline";
+import SocialLinks from "./homepage/components/SocialLinks";
+import AboutSection from "./homepage/components/AboutSection";
+import ProjectContainer from "./homepage/components/ProjectContainer";
+import ExperienceContainer from "./homepage/components/ExperienceContainer";
+import EducationContainer from "./homepage/components/EducationContainer";
+import SkillsSection from "./homepage/components/SkillsSection";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="min-h-screen">
-      {/* Hero Section with Gradient Background */}
-      <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-600 via-blue-500 to-white text-white px-4">
-        <Title />
-        <Headline />
-        <SocialLinks />
+    <div className="min-h-screen bg-gray-900">
+      {/* Hero Section */}
+      <section className="relative min-h-[70vh] flex flex-col items-center justify-center text-white px-4 -mt-[80px] pt-[80px]">
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-900 via-blue-950 to-gray-900 z-0"></div>
+        <div className="absolute inset-0 z-0 lattice-pattern"></div>
+        <div className="z-10 relative">
+          <Title />
+          <Headline />
+          <SocialLinks />
+        </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 bg-white">
+      <section id="about" className="py-16 px-4 bg-gray-900">
         <AboutSection />
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800">Projects</h2>
+      <section id="projects" className="py-16 px-4 bg-gray-950">
+        <div className="w-full mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-10 text-gray-100">Projects</h2>
           <ProjectContainer />
         </div>
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-20 px-4 bg-white">
+      <section id="experience" className="py-16 px-4 bg-gray-900">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800">Experience & Education</h2>
-          <div className="flex flex-col md:flex-row justify-center gap-8 mx-auto">
-            <div className="w-full md:w-1/2">
-              <ExperienceContainer />
-            </div>
-            <div className="w-full md:w-1/2">
-              <EducationContainer />
-            </div>
+          <h2 className="text-4xl font-bold text-center mb-10 text-gray-100">Experience</h2>
+          <div className="flex flex-col gap-8 mx-auto max-w-3xl">
+            <ExperienceContainer />
+            <EducationContainer />
           </div>
         </div>
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-4 bg-gray-50">
+      <section id="skills" className="py-16 px-4 bg-gray-950">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800">Skills</h2>
+          <h2 className="text-4xl font-bold text-center mb-10 text-gray-100">Skills</h2>
           <SkillsSection />
         </div>
       </section>

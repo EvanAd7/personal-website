@@ -1,34 +1,38 @@
-// This will be replaced with actual data later
-const skills = [
-  { name: 'JavaScript', icon: '/images/skills/javascript.png' },
-  { name: 'React', icon: '/images/skills/react.png' },
-  { name: 'Next.js', icon: '/images/skills/nextjs.png' },
-  { name: 'Node.js', icon: '/images/skills/nodejs.png' },
-  { name: 'Python', icon: '/images/skills/python.png' },
-  { name: 'TensorFlow', icon: '/images/skills/tensorflow.png' },
-  { name: 'AWS', icon: '/images/skills/aws.png' },
-  { name: 'Docker', icon: '/images/skills/docker.png' },
-  { name: 'Git', icon: '/images/skills/git.png' },
-  { name: 'TypeScript', icon: '/images/skills/typescript.png' },
-  { name: 'MongoDB', icon: '/images/skills/mongodb.png' },
-  { name: 'SQL', icon: '/images/skills/sql.png' },
-];
+import { motion } from "motion/react";
+import { container, item } from "/data/animations";
+import { skills } from "/data/skills";
 
 const SkillsSection = () => {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+    <motion.div
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
+      className="grid grid-cols-8 gap-8"
+      id="skills"
+    >
       {skills.map((skill, index) => (
-        <div key={index} className="flex flex-col items-center">
-          <div className="w-20 h-20 bg-white rounded-full shadow-md flex items-center justify-center p-4 mb-2">
-            {/* Placeholder for skill icon */}
-            <div className="w-full h-full bg-gray-200 rounded-full flex items-center justify-center">
-              <span className="text-xs text-gray-600">{skill.name}</span>
-            </div>
+        <motion.div
+          key={index}
+          className="flex flex-col items-center"
+          variants={item}
+          custom={index}
+        >
+          <div
+            className="w-20 h-20 bg-gray-950 shadow-2xl flex items-center justify-center mb-2 hover:scale-110 transition-all duration-300 cursor-pointer"
+            onClick={() => window.open(skill.link, '_blank')}
+          >
+            <img
+              src={skill.icon}
+              alt={skill.name}
+              className="w-full h-full rounded-lg object-contain"
+            />
           </div>
-          <span className="text-gray-700 font-medium">{skill.name}</span>
-        </div>
+          <span className="text-gray-300 font-medium">{skill.name}</span>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

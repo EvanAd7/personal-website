@@ -7,7 +7,7 @@ const SocialButton = ({ icon, href, label }) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="w-12 h-12 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110"
+      className="w-12 h-12 rounded-full border border-white/15 hover:bg-white/10 flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110"
       aria-label={label}
     >
       {icon}
@@ -21,12 +21,27 @@ export default function SocialLinks() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.4 }}
-      className="flex space-x-4 mb-16"
+      className="flex justify-center items-center space-x-4 mb-16"
     >
-      <SocialButton icon={<Github size={24} />} href="https://github.com/yourusername" label="GitHub" />
-      <SocialButton icon={<Linkedin size={24} />} href="https://linkedin.com/in/yourusername" label="LinkedIn" />
-      <SocialButton icon={<Mail size={24} />} href="mailto:your.email@example.com" label="Email" />
-      <SocialButton icon={<FileText size={24} />} href="/resume.pdf" label="Resume" />
+      {[
+        { icon: <Github size={24} />, href: "https://github.com/EvanAd7", label: "GitHub" },
+        { icon: <Linkedin size={24} />, href: "https://www.linkedin.com/in/evan-adami-16b98a290", label: "LinkedIn" },
+        { icon: <Mail size={24} />, href: "mailto:evanadami@gmail.com", label: "Email" },
+        { icon: <FileText size={24} />, href: "/evan_adami_resume.pdf", label: "Resume" }
+      ].map((social, index) => (
+        <motion.div
+          key={social.label}
+          initial={{ opacity: 0, scale: 0.8, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 + (index * 0.1) }}
+        >
+          <SocialButton 
+            icon={social.icon} 
+            href={social.href} 
+            label={social.label} 
+          />
+        </motion.div>
+      ))}
     </motion.div>
   );
 } 

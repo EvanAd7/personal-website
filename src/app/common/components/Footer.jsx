@@ -1,20 +1,29 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, FileText } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
     <footer className="bg-gray-900 text-white py-12">
-      <div className="max-w-6xl mx-auto px-4 md:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-6 md:mb-0">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="flex flex-row justify-between items-center">
+          <div className="mb-0">
             <h3 className="text-xl font-bold mb-2">Evan Adami</h3>
-            <p className="text-gray-400">Software engineer, AI researcher, and entrepreneur</p>
+            <p className="text-gray-400">
+              <a 
+                className="hover:text-white transition-colors underline" 
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/EvanAd7/personal-website">
+                  Made from scratch
+              </a>
+              {" "}using Next.js and Tailwind
+            </p>
           </div>
           
           <div className="flex space-x-6">
             <a 
-              href="https://github.com/yourusername" 
+              href="https://github.com/EvanAd7" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
@@ -23,7 +32,7 @@ const Footer = () => {
               <Github size={24} />
             </a>
             <a 
-              href="https://linkedin.com/in/yourusername" 
+              href="https://www.linkedin.com/in/evan-adami-16b98a290" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
@@ -32,11 +41,20 @@ const Footer = () => {
               <Linkedin size={24} />
             </a>
             <a 
-              href="mailto:your.email@example.com" 
+              href="mailto:evanadami7@gmail.com" 
               className="text-gray-400 hover:text-white transition-colors"
               aria-label="Email"
             >
               <Mail size={24} />
+            </a>
+            <a 
+              href="/evan_adami_resume.pdf" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors"
+              aria-label="Resume"
+            >
+              <FileText size={24} />
             </a>
           </div>
         </div>

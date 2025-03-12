@@ -1,12 +1,14 @@
 import { motion } from "motion/react";
+import { item } from "/data/animations";
 
 export default function Headline() {
   return (
     <motion.h2
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.2 }}
-      className="text-2xl md:text-3xl text-center text-white mb-12"
+      variants={item}
+      initial="hidden"
+      animate="visible"
+      transition={{ delay: 0.4 }}
+      className="text-4xl text-center text-gray-200 mb-12 relative z-10"
     >
       Software engineer, AI researcher, and entrepreneur
     </motion.h2>
