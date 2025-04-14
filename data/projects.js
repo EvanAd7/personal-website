@@ -28,6 +28,13 @@ export const projects = [
         link: "https://www.linkedin.com/feed/update/urn:li:activity:7272301614776872960/"
     },
     {
+        title: "Archive",
+        description: "A MacOS native plugin that automatically embeds, sorts, and organizes your files, all locally on your computer.",
+        image: "/images/projects/Archive.png",
+        technologies: ["Swift", "SwiftUI", "Ollama"],
+        link: "https://github.com/daniel-trachtenberg/archive-plugin"
+    },
+    {
         title: "ML for Alzheimer's",
         description: "A novel approach for predicting Alzheimer's disease using machine learning on DNA methylation in blood.",
         image: "/images/projects/Alzheimers.png",

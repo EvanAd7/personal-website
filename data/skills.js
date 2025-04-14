@@ -40,14 +40,14 @@ export const skills = [
         link: 'https://nextjs.org/'
     },
     {
+        name: 'Swift',
+        icon: '/images/skills/swift.png',
+        link: 'https://developer.apple.com/documentation/swift/'
+    },
+    {
         name: 'Django',
         icon: '/images/skills/django.png',
         link: 'https://www.djangoproject.com/'
-    },
-    {
-        name: 'FastAPI',
-        icon: '/images/skills/fastapi.png',
-        link: 'https://fastapi.tiangolo.com/'
     },
     {
         name: 'Git',
