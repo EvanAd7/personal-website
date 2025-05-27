@@ -27,14 +27,9 @@ export default function AboutSection() {
         </motion.p>
         
         <motion.p variants={item}>
-          Recently, I've been building a startup called Lattice, an AI-powered platform that streamlines the chemical R&D process. We've received $1,000 in seed funding so far,
-          and are currently working with 4 biopharmaceutical companies to pilot the platform.
-        </motion.p>
-        
-        <motion.p variants={item}>
           I'm also a researcher with deep interests in the field of <span className="font-extrabold">neuroscience</span>, <span className="font-extrabold">artificial intelligence</span>, <span className="font-extrabold">machine learning</span>, and <span className="font-extrabold">epigenetics</span>.
           In high school, I conducted research at UC San Diego and published an independent research paper.
-          When I'm not working or studying, I enjoy surfing, hiking, and playing music.
+          When I'm not working or studying, I enjoy surfing, hiking, lifting, and playing music.
         </motion.p>
       </motion.div>
     </div>

@@ -28,10 +28,17 @@ export const projects = [
         link: "https://www.linkedin.com/feed/update/urn:li:activity:7272301614776872960/"
     },
     {
+        title: "Brew",
+        description: "Automated cold outreach platform that finds potential connections and agentically sends them personalized networking messages.",
+        image: "/images/projects/Brew.png",
+        technologies: ["1st Place - LA Hacks", "Gemini", "Stagehand"],
+        link: "https://www.brewmail.co"
+    },
+    {
         title: "Archive",
         description: "A MacOS native plugin that automatically embeds, sorts, and organizes your files, all locally on your computer.",
         image: "/images/projects/Archive.png",
-        technologies: ["Swift", "SwiftUI", "Ollama"],
+        technologies: ["2nd Place - Llama Stack Challenge", "Swift"],
         link: "https://github.com/daniel-trachtenberg/archive-plugin"
     },
     {
